@@ -1,16 +1,19 @@
 <div class="card">
   <div class="card-header">
-    <span class="card-title">{{titreArticle}}</span>
+    <span class="card-title">{{proprio}}</span>
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Résumé</a>
+        <a class="nav-link active" data-toggle="tab" href="#contenu{{id}}" role="tab">Résumé</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Détail</a>
+        <a class="nav-link" data-toggle="tab" href="#description{{id}}" role="tab">Détail</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <p>{{contenuArticle}}</p>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="contenu{{id}}" role="tabpanel">{{contenuAnnonce}}</div>
+      <div class="tab-pane fade" id="description{{id}}" role="tabpanel" >{{description}}</div>
+    </div>
   </div>
 </div>

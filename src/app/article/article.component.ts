@@ -7,14 +7,18 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  @Input() titreArticle: string;
+  @Input() proprio: string;
 
- contenuArticle: string;
+  @Input() description: string;
+
+  @Input() id: number;
+
+ contenuAnnonce: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.contenuArticle = 'La maison à ' + this.titreArticle;
+    this.contenuAnnonce = 'La maison à ' + this.proprio;
   }
 
 }

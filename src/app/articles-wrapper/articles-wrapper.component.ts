@@ -7,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesWrapperComponent implements OnInit {
 
-  listGens: Array<string> = ['Jean Guy', 'René', 'Guy de Lusignan'];
+  listMaisons = [
+    {
+      id: 1,
+      proprio:'Jean Guy',
+      description:'Charmante propriété de bord de mer'
+    },
+    {
+      id: 2,
+      proprio:'René',
+      description:'Charmante propriété de bord de rocade'
+    },
+    {
+      id: 3,
+      proprio:'Guy de Lusignan',
+      description:'De la MERDE'
+    }
+    ];
+
   constructor() { }
 
   ngOnInit() {
